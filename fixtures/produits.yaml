@@ -1,0 +1,18 @@
+App\Entity\Categorie:
+  categorie_{1..10}:
+    nomCateg: <word()>
+
+App\Entity\Produit:
+  produit_{1..100}:
+    nomProd: <word()>
+    descriptionProd: <text(100)>
+    prixProd: <numberBetween(500,400000)>
+    imgProd: http://picsum.photos/id/<numberBetween(400,800)>/290/180
+    promo: '10%? 1 : 0'
+    categories: '<numberBetween(1,5)>x @categorie_*'
+    magasin: '@magasin_<numberBetween(1,5)>'
+
+App\Entity\Magasin:
+  magasin_{1..5}:
+    nomMag: <word()>
+    villeMag: <word()>

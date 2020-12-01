@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ma petite entreprise{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                {# Formulaire de recherche #}
+                {% include 'produit/_formrecherche.html.twig' with {form: form} %}
+            </div>
+
+
+            <div class="col-md-9">
+                <div class="grille">
+                    {% for produit in produits %}
+                        {% include 'produit/_produitcard.html.twig' with {produit: produit} %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

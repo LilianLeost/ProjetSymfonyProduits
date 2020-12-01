@@ -1,0 +1,21 @@
+<div class="card animate__animated animate__fadeInRight">
+    <img src="{{ produit.imgProd }}" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">{{ produit.nomProd }}</h5>
+        <div class="card-title text-primary" style="font-weight: bold;font-size: 1.5em">
+            {{ produit.prixProd | number_format(0,' ',' ') }} €
+
+            {% if produit.promo %}
+                <div class="text text-warning">Promo !</div>
+            {% endif %}
+        </div>
+        <p class="text text-muted">{{ produit.descriptionProd }}</p>
+       <div class="row">
+            {% for categorie in produit.categories %}
+                <div>
+                    <span class="badge badge-dark" style="font-size: 1.1em">{{ categorie.nomCateg }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

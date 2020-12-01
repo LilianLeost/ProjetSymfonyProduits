@@ -1,0 +1,30 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Produit {
+
+    -idProd : int
+    -nomProd : string
+    -prixProd : int
+    -descriptionProd : text
+    -imgProd : string
+    -promo : boolean
+
+
+}
+
+Categorie "1..*" -- "*" Produit:appartient <
+
+class Categorie {
+
+    -idCateg : integer
+    -nomCateg : string
+}
+
+class Magasin {
+    -idMag
+    -nomMag : string
+    -villeMag : string
+}
+
+Produit "1..*" -- "1..1" Magasin:contient <
+@enduml
