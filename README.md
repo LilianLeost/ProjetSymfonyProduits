@@ -10,11 +10,11 @@ Le projet est composé d'un cas d'utilisation qui comporte pour l'utilisateur la
 
 Diagramme de cas d'utilisation :
 
-![Diagramme des cas d'utilisation](../docs/diagramme_user_case.png)
+![Diagramme des cas d'utilisation](docs/diagramme_user_case.png)
 
 Diagramme de classes :
 
-![Diagramme de classes](../docs/diagramme_class.png)
+![Diagramme de classes](docs/diagramme_class.png)
 
 
 * ## Outils
